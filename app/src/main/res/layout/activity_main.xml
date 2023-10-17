@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="@color/black">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="221dp">
+
+        <TextView
+            android:id="@+id/exprssionTV"
+            android:layout_width="385dp"
+            android:layout_height="30dp"
+            android:textSize="22sp"
+            android:text=""
+            android:textAlignment="textEnd"
+            android:gravity="center"
+            android:lines="1"
+            android:maxLines="2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/resultTV"
+            android:layout_width="385dp"
+            android:layout_height="37dp"
+            android:layout_marginTop="24dp"
+            android:text=""
+            android:textAlignment="textEnd"
+            android:gravity="center"
+            android:textSize="28sp"
+            android:lines="1"
+            android:maxLines="1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/exprssionTV" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+         >
+        <TableRow
+            style="@style/btnRow">
+            <Button
+                android:id="@+id/ac"
+                style="@style/btnNumber"
+                android:text="AC"
+                android:onClick="allClear"
+                android:textColor="@color/red"
+                />
+            <Button
+                android:id="@+id/bckspace"
+                style="@style/btnNumber"
+                android:onClick="bckSpace"
+                android:text="⌫ "
+                android:textColor="@color/red"
+
+                />
+        </TableRow>
+
+        <TableRow
+            style="@style/btnRow">
+            <Button
+                style="@style/btnNumber"
+                android:text="9"
+                />
+            <Button
+
+                style="@style/btnNumber"
+                android:text="8"
+                />
+            <Button
+                style="@style/btnNumber"
+                android:text="7"
+                />
+            <Button
+                style="@style/btnNumber"
+                android:onClick="operator"
+                android:text="+"
+                android:textColor="@color/orange"
+                />
+
+        </TableRow>
+
+        <TableRow
+            style="@style/btnRow">
+            <Button
+                style="@style/btnNumber"
+                android:text="6"
+                />
+            <Button
+                style="@style/btnNumber"
+                android:text="5"
+                />
+            <Button
+                style="@style/btnNumber"
+                android:text="4"
+                />
+            <Button
+                style="@style/btnNumber"
+                android:onClick="operator"
+                android:text="-"
+                android:textColor="@color/orange"
+                />
+
+        </TableRow>
+        <TableRow
+            style="@style/btnRow">
+            <Button
+                style="@style/btnNumber"
+                android:text="3"
+                />
+            <Button
+                style="@style/btnNumber"
+                android:text="2"
+                />
+            <Button
+                style="@style/btnNumber"
+                android:text="1"
+                />
+            <Button
+                style="@style/btnNumber"
+                android:onClick="operator"
+                android:text="*"
+                android:textColor="@color/orange"
+                />
+
+        </TableRow>
+        <TableRow
+            style="@style/btnRow">
+            <Button
+                style="@style/btnNumber"
+                android:text="."
+                />
+            <Button
+                style="@style/btnNumber"
+                android:text="0"
+                />
+
+            <Button
+                style="@style/btnNumber"
+                android:onClick="answer"
+                android:text="=" />
+            <Button
+                style="@style/btnNumber"
+                android:onClick="operator"
+                android:text="/"
+                android:textColor="@color/orange"
+                />
+
+
+
+
+        </TableRow>
+
+
+    </TableLayout>
+</LinearLayout>
